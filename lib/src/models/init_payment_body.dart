@@ -14,4 +14,15 @@ class InitPaymentBody {
     this.notifUrl,
     this.redirectUrl,
   });
+
+  Map<String, dynamic> toJson() {
+    return {
+      'montant': montant,
+      'devise': devise,
+      'reference': reference,
+      'panier': panier,
+      'notifUrl': notifUrl,
+      'redirectUrl': redirectUrl,
+    };
+  }
 }

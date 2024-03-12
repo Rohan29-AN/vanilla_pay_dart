@@ -1,20 +1,17 @@
-class InitPaymentBody{
-   int? codeRetour;
-   String? descRetour;
-   String? detailRetour;
-    Data? data;
-  
+class InitPaymentBody {
+  double? montant;
+  String? devise;
+  String? reference;
+  String? panier;
+  String? notifUrl;
+  String? redirectUrl;
+
   InitPaymentBody({
-    this.codeRetour,
-    this.descRetour,
-    this.detailRetour,
-    this.data,
+    this.montant,
+    this.devise,
+    this.reference,
+    this.panier,
+    this.notifUrl,
+    this.redirectUrl,
   });
-}
-
-class Data{
-  String? url;
-
-  Data({this.url})
-
 }

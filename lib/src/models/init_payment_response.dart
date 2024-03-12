@@ -1,9 +1,9 @@
-class InitPaymentResponse{
-   final int codeRetour;
-   final String descRetour;
-   final String detailRetour;
+class InitPaymentResponse {
+  final int codeRetour;
+  final String descRetour;
+  final String detailRetour;
   final Data data;
-  
+
   InitPaymentResponse({
     required this.codeRetour,
     required this.descRetour,
@@ -11,9 +11,8 @@ class InitPaymentResponse{
     required this.data,
   });
 
-
-  factory InitPaymentResponse.fromJson(Map<String,dynamic> json){
-     return InitPaymentResponse(
+  factory InitPaymentResponse.fromJson(Map<String, dynamic> json) {
+    return InitPaymentResponse(
       codeRetour: json['CodeRetour'],
       descRetour: json['DescRetour'],
       detailRetour: json['DetailRetour'],
@@ -22,13 +21,15 @@ class InitPaymentResponse{
   }
 }
 
-class Data{
+class Data {
   String url;
 
   Data({required this.url});
 
-  factory Data.fromJson(Map<String,dynamic> json){
-    return Data(url: json['url'] as String,);
+  factory Data.fromJson(Map<String, dynamic> json) {
+    return Data(
+      url: json['url'] as String,
+    );
   }
 
   @override
@@ -36,4 +37,3 @@ class Data{
     return 'Data{url: $url}';
   }
 }
-

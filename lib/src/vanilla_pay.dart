@@ -5,11 +5,11 @@ import 'package:vanilla_pay_international/src/models/transaction_status_response
 import 'package:vanilla_pay_international/src/service/vpi_service.dart';
 import 'package:vanilla_pay_international/src/utils/utils.dart';
 
-class PaymentManager {
+class VanillaPay {
   final VanillaPayService vanillaService;
   final String keySecret;
 
-  PaymentManager(
+  VanillaPay(
       {required String env,
       required String vpiVersion,
       required String clientId,

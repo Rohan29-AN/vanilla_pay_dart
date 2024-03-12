@@ -21,13 +21,13 @@ Then, run `flutter pub get` to install the package.
 
 ### Initialize Payment Manager
 
-To use the Vanilla Pay International services, you need to initialize a `PaymentManager` instance:
+To use the Vanilla Pay International services, you need to initialize a `VanillaPay` instance:
 
 ```dart
 import 'package:vanilla_pay_international/vanilla_pay_international.dart';
 
 void main() {
-  PaymentManager paymentManager = PaymentManager(
+  VanillaPay paymentManager = VanillaPay(
     env: 'PROD',
     vpiVersion: '1.0.0',
     clientId: 'your_client_id',

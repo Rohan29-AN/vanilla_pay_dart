@@ -1,7 +1,7 @@
 name: vanilla_pay_international
 description: "A new Flutter package project."
 version: 0.0.1
-homepage:
+homepage: https://github.com/Rohan29-AN/vanilla_pay_dart
 
 environment:
   sdk: '>=3.4.0-220.0.dev <4.0.0'

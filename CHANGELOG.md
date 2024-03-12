@@ -1,3 +1,2 @@
-## 0.0.1
-
-* TODO: Describe initial release.
+## 1.0.0 - Initial Release
+- Added initial functionality for integrating Vanilla Pay International's payment service into Flutter applications.

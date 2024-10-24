@@ -1,6 +1,6 @@
 name: vanilla_pay_international
 description: "The Vanilla Pay International Dart package provides a convenient way to integrate Vanilla Pay International services into your Flutter applications (Android & iOs). It allows you to generate tokens, initialize payments, check transaction statuses, and validate data authenticity with ease."
-version: 1.0.0
+version: 1.0.1
 homepage: https://github.com/Rohan29-AN/vanilla_pay_dart
 
 environment:

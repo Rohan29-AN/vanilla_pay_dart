@@ -27,7 +27,6 @@ String? getIdFromLink(String url) {
       return '';
     }
   } catch (e) {
-    print('Error parsing URL: $e');
     return null;
   }
 }

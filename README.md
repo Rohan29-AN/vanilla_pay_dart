@@ -12,7 +12,7 @@ To use this package, add `vanilla_pay_international` as a dependency in your `pu
 
 ```yaml
 dependencies:
-  vanilla_pay_international: ^1.0.0
+  vanilla_pay_international: ^1.0.2
 ```
 
 Then, run `flutter pub get` to install the package.
@@ -29,7 +29,7 @@ import 'package:vanilla_pay_international/vanilla_pay_international.dart';
 void main() {
   VanillaPay paymentManager = VanillaPay(
     env: 'PROD',
-    vpiVersion: '1.0.0',
+    vpiVersion: 'vpi_version',
     clientId: 'your_client_id',
     clientSecret: 'your_client_secret',
     keySecret: 'your_key_secret',

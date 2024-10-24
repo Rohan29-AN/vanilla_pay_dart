@@ -12,6 +12,8 @@ dependencies:
     sdk: flutter
   crypto: ^3.0.3
   http: ^1.2.1
+  mockito: ^5.0.0
+  build_runner: ^2.1.11
 
 dev_dependencies:
   flutter_test:

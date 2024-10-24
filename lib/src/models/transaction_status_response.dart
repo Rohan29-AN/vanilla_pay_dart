@@ -12,11 +12,10 @@ class TransactionStatusResponse {
 
   factory TransactionStatusResponse.fromJson(Map<String, dynamic> json) {
     return TransactionStatusResponse(
-      codeRetour: json['CodeRetour'] as int,
-      descRetour: json['DescRetour'] as String,
-      detailRetour: json['DetailRetour'] as String,
-      data: json['Data'] as Data,
-    );
+        codeRetour: json['CodeRetour'] as int,
+        descRetour: json['DescRetour'] as String,
+        detailRetour: json['DetailRetour'] as String,
+        data: json['Data'] != null ? Data.fromJson(json['Data']) : null);
   }
 }
 

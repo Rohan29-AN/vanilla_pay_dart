@@ -90,9 +90,11 @@ class VanillaPayService {
           Uri.parse('${getBaseUrl(env)}$transactionStatusEndPoint/$id'),
           headers: headers);
       if (response.statusCode == 200) {
+        // Get the value of the 'vpi_signature' header
+        String? vpiSignature = response.headers['vpi_signature'];
+
         return transaction_status_response.TransactionStatusResponse.fromJson(
-          jsonDecode(response.body) as Map<String, dynamic>,
-        );
+            jsonDecode(response.body) as Map<String, dynamic>, vpiSignature!);
       } else {
         throw Exception(
             'Failed to check transaction status: ${response.statusCode}');

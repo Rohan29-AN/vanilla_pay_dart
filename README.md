@@ -12,7 +12,7 @@ To use this package, add `vanilla_pay_international` as a dependency in your `pu
 
 ```yaml
 dependencies:
-  vanilla_pay_international: ^1.0.2
+  vanilla_pay_international: ^1.0.3
 ```
 
 Then, run `flutter pub get` to install the package.
@@ -115,9 +115,9 @@ Response (status):
     "DetailRetour": "",
     "Data": {
         "reference_VPI": "VPI23011201010101",
-	    "panier" : "panier123",
+	      "panier" : "panier123",
         "reference": "ABC-1234",
-        "montant": 58.5,
+        "remarque": "BLABLA",
         "etat": "SUCCESS"
     }
 }

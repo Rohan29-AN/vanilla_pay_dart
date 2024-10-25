@@ -23,14 +23,14 @@ class Data {
   String? referenceVPI;
   String? panier;
   String? reference;
-  double? montant;
+  String? remarque;
   String? etat;
 
   Data(
       {required this.referenceVPI,
       required this.panier,
       required this.reference,
-      required this.montant,
+      required this.remarque,
       required this.etat});
 
   factory Data.fromJson(Map<String, dynamic> json) {
@@ -38,7 +38,7 @@ class Data {
         referenceVPI: json['reference_VPI'] as String,
         panier: json['panier'] as String,
         reference: json['reference'] as String,
-        montant: json['montant'] as double,
+        remarque: json['remarque'] as String,
         etat: json['etat'] as String);
   }
 }

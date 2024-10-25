@@ -115,7 +115,7 @@ void main() {
                   referenceVPI: "VPI23011201010101",
                   panier: "panier123",
                   reference: "ABC-1234",
-                  montant: 10.0,
+                  remarque: '',
                   etat: "SUCCESS"));
 
       when(mockVanillaPay.checkTransactionStatus(token, 'https://link.com'))

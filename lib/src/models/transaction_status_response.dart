@@ -3,22 +3,18 @@ class TransactionStatusResponse {
   String? descRetour;
   String? detailRetour;
   Data? data;
-  String? vpiSignature;
 
   TransactionStatusResponse(
       {required this.codeRetour,
       required this.descRetour,
       required this.detailRetour,
-      required this.vpiSignature,
       required this.data});
 
-  factory TransactionStatusResponse.fromJson(
-      Map<String, dynamic> json, String signature) {
+  factory TransactionStatusResponse.fromJson(Map<String, dynamic> json) {
     return TransactionStatusResponse(
         codeRetour: json['CodeRetour'] as int,
         descRetour: json['DescRetour'] as String,
         detailRetour: json['DetailRetour'] as String,
-        vpiSignature: signature,
         data: json['Data'] != null ? Data.fromJson(json['Data']) : null);
   }
 }

@@ -7,6 +7,7 @@ import 'package:vanilla_pay_international/src/models/token_response.dart'
     as token_response;
 import 'package:vanilla_pay_international/src/models/transaction_status_response.dart'
     as transaction_status_response;
+import 'package:vanilla_pay_international/src/utils/utils.dart';
 import 'package:vanilla_pay_international/vanilla_pay_international.dart';
 
 import 'vanilla_pay_international_test.mocks.dart';
@@ -138,6 +139,37 @@ void main() {
           () async => await mockVanillaPay.checkTransactionStatus(
               token, 'https://link.com'),
           throwsException);
+    });
+
+    test('should return correct HMAC sha256 hash', () {
+      String secret = 'shutt';
+      String payload = 'vanilla pay international';
+      String expectedHash =
+          '2069B313561E4FE5BE48C8413E1DE1F1F983FF16D6314A6BF178AE5497A0B782';
+      //Act
+      String result = hashData(secret, payload);
+      // Assert
+      expect(result, expectedHash);
+    });
+
+    test('should return id from valid URL', () {
+      //Arrange
+      String url =
+          'https://preprod.vanilla-pay.net/webpayment?id=eyJhbGciOiJIUzI1NiJ9.VlBJMjQwMjE2MDg0NTAzMDc.MOkDDnEvH4qPRcg6CJovac836-XA5kPIeeSGJErQ9k8';
+      //Act
+      String? id = getIdFromLink(url);
+      //Assert
+      expect(id,
+          'eyJhbGciOiJIUzI1NiJ9.VlBJMjQwMjE2MDg0NTAzMDc.MOkDDnEvH4qPRcg6CJovac836-XA5kPIeeSGJErQ9k8');
+    });
+
+    test('should return empty if id is not present in the url', () {
+      //Arrange
+      String url = 'https://preprod.vanilla-pay.net/webpayment';
+      //Act
+      String? id = getIdFromLink(url);
+      //Assert
+      expect(id, '');
     });
   });
 }

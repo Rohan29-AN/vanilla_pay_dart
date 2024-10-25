@@ -111,6 +111,7 @@ void main() {
               codeRetour: 200,
               descRetour: "Transaction status.",
               detailRetour: "detailRetour",
+              vpiSignature: 'vanilla',
               data: transaction_status_response.Data(
                   referenceVPI: "VPI23011201010101",
                   panier: "panier123",
